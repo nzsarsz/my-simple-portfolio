@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my simple portfolio</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+
+<body>
+  <section></section>
+  <div class="layer">
+    <h2>Hey I'm Nazwa Sabira</h2>
+    <h1> The Author of <br> Trio SRR </h1>
+  </div>
+
+
+ <section class="section2">
+  <h3>Know about me?</h3>
+  <button onclick="typeWriter()">Click me</button>
+ <p id="demo"></p>
+ </section>
+ <script>
+  var i = 0;
+  var txt = 'Hi bruh this is monsretro a.k.a nazwa from the world of.. idk but i live with my lovely trio. They are so pretty at all times. They are Sora, Rafutaa, and Rei! Actually I can not life without them haha. I try my best (a little), so ganbarre for me!';
+  var speed = 80;
+  
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  </script>
+
+ <script>
+  let layer = document.querySelector('.layer');
+  console.log(layer);
+
+  window.addEventListener("scroll", function () {
+    let value = window.scrollY;
+    layer.style.left = value + "px";
+  });
+ </script>
+</body>
+</html>
